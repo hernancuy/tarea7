@@ -6,9 +6,11 @@ def main():
     path = sys.argv[1]
     image = Image.open(path)
     width, height = image.size
-    new_height = int(100 * height / width)
-    image = image.resize((100, new_height))
-    #"D:/Users/HernanDavid/Descargas/descargar.jpg"
+    new_width = 100
+    height = int(new_width * height / width)
+    width = new_width
+    image = image.resize((width, height))
+    #"C:/Users/ArturoHurtado/Downloads/descargar.png"
     image = image.convert("L")
     pixels = list(image.getdata())
     #print(image.size)

@@ -12,7 +12,7 @@ def main():
     image = image.convert("L")
     pixels = list(image.getdata())
     #print(image.size)
-    string = [pixels[i * width:(i + 1) * width] for i in range(height)]
+    string = [pixels[i * 100:(i + 1) * 100] for i in range(new_height)]
     output = str(string)
     with open("./image.txt", 'w', encoding='utf-8', newline='') as   f:
         f.write(output)

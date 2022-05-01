@@ -10,8 +10,7 @@ def main():
     height = int(new_width * height / width)
     width = new_width
     image = image.resize((width, height))
-    #"C:/Users/ArturoHurtado/Downloads/descargar.png"
-    image = image.convert("L")
+    image = image.convert("1")
     pixels = list(image.getdata())
     #print(image.size)
     string = [pixels[i * width:(i + 1) * width] for i in range(height)]
